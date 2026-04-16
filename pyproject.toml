@@ -1,0 +1,19 @@
+[project]
+name = "ocr-local-platform"
+version = "0.1.0"
+description = "Local-first OCR orchestration backend based on PLAN.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+  "pydantic>=2.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
